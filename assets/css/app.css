@@ -8,7 +8,14 @@
 .sl-wrapper .sl-close {
   color: white;
 }
+.sl-wrapper .sl-counter {
+  color: white;
+}
 /*Overwrite Lightbox*/
+
+html {
+  scroll-behavior: smooth;
+}
 
 .image-gallery {
   display: flex;
