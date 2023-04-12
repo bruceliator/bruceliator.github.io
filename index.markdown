@@ -2,10 +2,6 @@
 layout: default
 title: BO "Lastivka"
 ---
-<script src="/assets/js/simple-lightbox.min.js"></script>
-<link rel="stylesheet" href="/assets/css/simple-lightbox.min.css">
-<link rel="stylesheet" href="/assets/css/app.css">
-<script src="/assets/js/app.js"></script>
 <div class="container">
   <h2>Малахіт/Койот</h2>
   <ul class="image-gallery">
