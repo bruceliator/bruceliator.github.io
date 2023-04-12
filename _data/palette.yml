@@ -1,16 +1,16 @@
-- id: 1
+- id: malahit_koyot
   name: Малахіт/Койот
-- id: 2
+- id: malahit
   name: Малахіт
-- id: 3
+- id: zelen
   name: Зелень
-- id: 4
+- id: zelen_olivka
   name: Зелень/Оливка
-- id: 5
+- id: olivka
   name: Оливка
-- id: 6
+- id: olivka_koyot
   name: Оливка/Койот
-- id: 7
+- id: koyot
   name: Койот
-- id: 8
+- id: malahit_zelen
   name: Малахіт/Зелень
