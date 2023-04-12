@@ -1,6 +1,15 @@
+/*Overwrite Lightbox*/
 .sl-overlay {
-  background: black !important;
+  background: black;
 }
+.sl-wrapper .sl-navigation button {
+  color: white;
+}
+.sl-wrapper .sl-close {
+  color: white;
+}
+/*Overwrite Lightbox*/
+
 .image-gallery {
   display: flex;
   flex-wrap: wrap;
