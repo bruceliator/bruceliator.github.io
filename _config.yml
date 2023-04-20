@@ -39,7 +39,7 @@ defaults:
   - scope:
       path: ""
     values:
-      image: /assets/images/lastivka.jpg
+      image: https://bruceliator.github.io/assets/images/lastivka.jpg
 
 # Exclude from processing.
 # The following items will not be processed, by default.
