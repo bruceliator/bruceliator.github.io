@@ -11,7 +11,7 @@ title: BO "Lastivka"
         {% if image.path contains path %}
           <li>
             <a href="{{ site.baseurl }}{{ image.path }}">
-              <img src="{{ site.baseurl }}{{ image.path }}" alt="" />
+              <img src="{{ site.baseurl }}{{ image.path }}" alt="{{ color.id }}_{{ image.basename }}"/>
             </a>
           </li>
         {% endif %}
