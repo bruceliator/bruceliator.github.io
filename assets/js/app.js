@@ -3,7 +3,8 @@ window.onload = function() {
       {
         overlayOpacity: '0.92',
         animationSpeed: 200,
-        fadeSpeed: 250
+        fadeSpeed: 250,
+        preloading: false
       }
   );
 };
