@@ -55,3 +55,68 @@ li {
   text-indent: 0;
   list-style-type: none;
 }
+
+.btn {
+  color: gold;
+}
+/*Button with icon*/
+.btn.mono {
+  background-color: #159957;
+  background-image: linear-gradient(120deg, #155799, #159957);
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+
+
+.btn.mono:hover {
+  text-decoration: none;
+  transform: scale(1.03);
+}
+
+.btn.icon {
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.btn.icon svg {
+  position: absolute;
+  top: 50%;
+  height: 1.5rem;
+  transform: translateY(-50%);
+}
+
+.btn.icon svg.icon-svg {
+  left: 0.5rem;
+}
+
+.btn.icon svg.icon-copy {
+  right: 0.5rem;
+}
+
+.btn.icon.copy {
+  text-align: left;
+}
+
+.btn.icon.copy .copy-text {
+  position: absolute;
+  right: 2.5rem;
+}
+
+/*Button with icon*/
+
+dl.bank-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+dl.bank-details dd {
+  margin: 0;
+}
+
+dl.bank-details .btn {
+  width: 500px;
+}
