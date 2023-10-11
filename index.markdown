@@ -1,6 +1,8 @@
 ---
 layout: default
 title: BO "Lastivka"
+navigation_text: Зробити внесок
+navigation_link: contacts
 ---
 <div class="container">
   {% for color in site.data.palette %}
