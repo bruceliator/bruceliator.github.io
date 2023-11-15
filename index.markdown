@@ -13,7 +13,11 @@ navigation_link: contacts
         {% if image.path contains path %}
           <li>
             <a href="{{ site.baseurl }}{{ image.path }}">
-              <img loading="lazy" src="{{ site.baseurl }}{{ image.path | replace: 'big', 'small'}}" alt="{{ color.id }}_{{ image.basename }}"/>
+              {% if color.order==1 %}
+                <img src="{{ site.baseurl }}{{ image.path | replace: 'big', 'small'}}" alt="{{ color.id }}_{{ image.basename }}"/>
+              {% else %}
+                <img loading="lazy" src="{{ site.baseurl }}{{ image.path | replace: 'big', 'small'}}" alt="{{ color.id }}_{{ image.basename }}"/>
+              {% endif %}
             </a>
           </li>
         {% endif %}
