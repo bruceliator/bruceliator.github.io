@@ -1,29 +1,20 @@
 - id: malahit_koyot
   name: Малахіт/Койот
-  order: 1
 - id: malahit
   name: Малахіт
-  order: 2
 - id: zelen
   name: Зелень
-  order: 3
 - id: zelen_olivka
   name: Зелень/Оливка
-  order: 4
 - id: olivka
   name: Оливка
-  order: 5
 - id: olivka_koyot
   name: Оливка/Койот
-  order: 6
 - id: koyot
   name: Койот
-  order: 7
 - id: malahit_zelen
   name: Малахіт/Зелень
-  order: 8
 #- id: nefrit_koyot
 #  name: Нефрит/Койот
 - id: white
   name: Білий
-  order: 9
