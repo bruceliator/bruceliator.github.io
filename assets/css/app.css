@@ -40,7 +40,7 @@ html {
 .image-gallery li img {
   object-fit: cover;
   width: 100%;
-  min-width: 358px;
+  min-width: calc(100vw - 2rem);
   height: 300px;
   vertical-align: middle;
   border-radius: 5px;
