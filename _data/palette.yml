@@ -1,7 +1,7 @@
 - id: white_multicam
   name: Білий мультикам
 - id: white_multicam_grafit
-  name: Білий мультикам/графіт (графіт можна додавати в будь-яких пропорціях)
+  name: Білий мультикам/графіт<span class="color-details">(графіт можна додавати в будь-яких пропорціях)</span>
 - id: malahit_koyot
   name: Малахіт/Койот
 - id: malahit_koyot

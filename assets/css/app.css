@@ -16,6 +16,12 @@
 html {
   scroll-behavior: smooth;
 }
+.color-details {
+  color: #606c71;
+  font-size: 0.65em;
+  font-weight: bold;
+  display: block;
+}
 
 .project-name a { color: white; }
 .project-name a:hover, .phone:hover { text-decoration: none; }
