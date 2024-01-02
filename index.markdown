@@ -1,7 +1,7 @@
 ---
 layout: default
-title: BO "Lastivka"
-navigation_text: Зробити внесок
+title: Bолонтерське об'єднання <br> "Lastivka"
+navigation_text: Про нас
 navigation_link: contacts
 ---
 <div class="container">

@@ -30,6 +30,8 @@ html {
   white-space: nowrap;
 }
 
+.text-align-center { text-align: center; }
+
 .image-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -172,3 +174,23 @@ dl.bank-details .btn {
   stroke: black;
 }
 /*Scroll to top button*/
+
+
+
+
+/*Social media links*/
+.sl-img-link {
+  height: 44px;
+  width: 44px;
+  display: inline-block;
+  margin: 5px;
+  background-repeat: no-repeat;
+}
+
+.sl-img-link:hover { text-decoration: none; }
+
+.sl-instagram { background-image: url(/assets/images/social_icons/instagram.svg); }
+.sl-facebook { background-image: url(/assets/images/social_icons/facebook.svg); }
+.sl-youtube { background-image: url(/assets/images/social_icons/youtube.svg); }
+.sl-tiktok { background-image: url(/assets/images/social_icons/tiktok.png); }
+/*Social media links*/
