@@ -23,6 +23,10 @@ html {
   display: block;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 .project-name a { color: white; }
 .project-name a:hover, .phone:hover { text-decoration: none; }
 .phone {
