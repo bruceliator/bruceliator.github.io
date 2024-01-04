@@ -1,4 +1,4 @@
-window.onload = function() {
+window.addEventListener("load", () => {
   const googleSheetsUrl = 'https://docs.google.com/spreadsheets/d/1p-sfkodyAIEzkw5dwwKkePzXJaiZCe25UzzX-NJCaiQ/'
   const monthsDisplayElement = document.getElementById('months');
   const netCountDisplayElement = document.getElementById('net_count');
@@ -33,7 +33,7 @@ window.onload = function() {
   }
 
   function getDataFromString(string) {
-    const match = string.match(/Сплетено:,\s*(\d+)\s*м².*?(\d+)\s*сіток сплетено/);
+    const match = string.match(/Сплетено:\s*(\d+)\s*м².*?(\d+)\s*сіток сплетено/);
 
     if (match) {
       displayResult(match)
@@ -59,4 +59,4 @@ window.onload = function() {
   if (netCountDisplayElement != null) {
     getDataFromGsheet()
   }
-}
+});

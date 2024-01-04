@@ -1,4 +1,4 @@
-window.onload = function() {
+window.addEventListener("load", () => {
   new SimpleLightbox('.image-gallery a',
       {
         overlayOpacity: '0.92',
@@ -80,4 +80,4 @@ window.onload = function() {
   mybutton.addEventListener("click", function() {
     topFunction(100);
   });
-};
+});
