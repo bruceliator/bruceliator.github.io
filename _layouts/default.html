@@ -17,9 +17,14 @@
     <link rel="manifest" href="../favicon/site.webmanifest">
     <script src="/assets/js/simple-lightbox.min.js"></script>
     <link rel="stylesheet" href="/assets/css/simple-lightbox.min.css">
+    {% if page.url == "/" %}
+        <script src="/assets/js/index.js"></script>
+    {% else %}
+        <link rel="stylesheet" href="/assets/css/splide-sea-green.min.css">
+        <script src="/assets/js/splide.min.js"></script>
+        <script src="/assets/js/about.js"></script>
+    {% endif %}
     <link rel="stylesheet" href="/assets/css/app.css">
-    <script src="/assets/js/app.js"></script>
-    <script src="/assets/js/about.js"></script>
 
     {% include head-custom.html %}
 </head>
