@@ -18,6 +18,11 @@ html {
   font-weight: bold;
   white-space: nowrap;
 }
+.logo img {
+  width: 200px;
+  border-radius: 100%;
+  aspect-ratio: 1/1 auto;
+}
 
 .text-align-center { text-align: center !important; }
 .text-bold { font-weight: bold !important; }
@@ -190,11 +195,6 @@ dl.bank-details .btn {
 }
 
 .sl-img-link:hover { text-decoration: none; }
-
-.sl-instagram { background-image: url(/assets/images/social_icons/instagram.svg); }
-.sl-facebook { background-image: url(/assets/images/social_icons/facebook.svg); }
-.sl-youtube { background-image: url(/assets/images/social_icons/youtube.svg); }
-.sl-tiktok { background-image: url(/assets/images/social_icons/tiktok.png); }
 /*Social media links*/
 
 /*Overwrite Splide slider styles*/
