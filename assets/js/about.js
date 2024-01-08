@@ -27,16 +27,47 @@ window.addEventListener("load", () => {
     }
   });
 
-  splide.on( 'mounted', function () {
-    new SimpleLightbox('.splide__list a',
-        {
-          overlayOpacity: '0.92',
-          animationSpeed: 200,
-          fadeSpeed: 250,
-          preloading: false
-        }
-    );
-  });
+  function getMeta(url, callback) {
+    var img = new Image;
+    img.src = url;
+    img.onload = function () {
+      callback(this.width, this.height);
+    }
+  }
 
+  function setImageSizes() {
+    document.querySelectorAll('.splide a').forEach(function (item) {
+      getMeta(item.href, function (w, h) {
+        let imgW, imgH;
+        let ratio = w / h;
+        let winH = window.innerHeight;
+        let winW = window.innerWidth;
+        let deltaH = Math.abs(winH - h);
+        let deltaW = Math.abs(winW - w);
+
+        if (deltaW < deltaH) {
+          imgW = winW;
+          imgH = winW / ratio;
+          if (imgH > winH) {
+            imgH = winH;
+            imgW = winH * ratio;
+          }
+        } else {
+          imgH = winH;
+          imgW = winH * ratio;
+          if (imgW > winW) {
+            imgW = winW;
+            imgH = winW / ratio;
+          }
+        }
+        item.dataset.pswpWidth = imgW
+        item.dataset.pswpHeight = imgH
+      });
+    });
+  }
+  setImageSizes();
+
+  splide.on( 'mounted', setImageSizes)
   splide.mount();
+  window.addEventListener("resize", setImageSizes);
 });
