@@ -15,3 +15,32 @@
     </ul>
   </div>
 </section>
+<script type="text/javascript">
+  var lightbox = new PhotoSwipeLightbox({
+    gallery: '.splide__list',
+    children: 'a',
+    crop: false,
+    bgOpacity: 0.9,
+    zoom: false,
+    counter: false,
+    initialZoomLevel: 'fill',
+    secondaryZoomLevel: 'fill',
+    tapAction: 'close',
+    pswpModule: PhotoSwipe
+  });
+  lightbox.init();
+
+  //back button fix begin
+  if (!history.state || !history.state.pswp || history.state.path !== window.location.pathname) {
+    history.pushState({pswp: true, path: window.location.pathname}, null, window.location.pathname);
+  }
+  window.addEventListener('popstate', function (e) {
+    if (typeof pswp==="object" && pswp && pswp.isOpen) {
+      history.pushState({pswp: true,path: window.location.pathname}, null, window.location.pathname);
+      pswp.close()
+    } else {
+      history.go(-1)
+    }
+  });
+  //back button fix end
+</script>
