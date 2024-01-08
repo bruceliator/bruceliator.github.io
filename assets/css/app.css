@@ -212,4 +212,10 @@ dl.bank-details .btn {
   height: 100%;
   object-fit: contain;
 }
+
+.splide__pagination__page {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
 /*Overwrite Splide slider styles*/
