@@ -219,3 +219,37 @@ dl.bank-details .btn {
   border-radius: 50%;
 }
 /*Overwrite Splide slider styles*/
+
+.reveal-wrap {
+  margin-left: -1rem;
+  margin-right: -1rem;
+  padding: 1rem;
+  background: #156788;
+}
+
+.scroll-reveal {
+  color: hsl(0 0% 100%/ 0.6);
+  background-clip: text;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(90deg, white, white);
+  background-size: 0% 100%;
+  animation: scroll-reveal linear forwards;
+  animation-timeline: view();
+  animation-range-start: 40vh;
+  animation-range-end: 70vh;
+  display: inline;
+}
+
+.numbers-block {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr;
+  margin-block: 2rem;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+@keyframes scroll-reveal {
+  to { background-size: 100% 100%; }
+}

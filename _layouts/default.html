@@ -6,7 +6,7 @@
     {% seo %}
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="format-detection" content="telephone=no" />
@@ -40,6 +40,16 @@
     </a>
     <h1 class="project-name"><a href="/">{{ page.title | default: site.title | default: site.github.repository_name }}</a></h1>
     <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+    {% if page.url != "/" %}
+    <div class="numbers-block">
+        <div>
+            <span id="area-count">17500</span> м²
+        </div>
+        <div>
+            <span id="net-count">400</span> шт
+        </div>
+    </div>
+    {% endif %}
     <a href="/{{page.navigation_link}}" class="btn"><b>{{ page.navigation_text }}</b></a>
 </header>
 
