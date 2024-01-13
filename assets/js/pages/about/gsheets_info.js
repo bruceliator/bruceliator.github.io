@@ -19,19 +19,8 @@ function monthsPassed(startDate) {
 }
 
 function displayResult(result) {
-  let areaValue = parseInt(areaDisplayElement.dataset.value);
-  let netValue = parseInt(netCountDisplayElement.dataset.value);
-
-  const realAreaValue = parseInt(result[1]);
-  const realNetValue = parseInt(result[2]);
-
-  Array.from({ length: (realAreaValue - areaValue) }).forEach((_, i) => {
-    setTimeout(() => areaDisplayElement.textContent = numberWithSpaces(areaValue + i + 1), 2 * i)
-  });
-
-  Array.from({ length: (realNetValue - netValue) }).forEach((_, i) => {
-    setTimeout(() => netCountDisplayElement.textContent = numberWithSpaces(netValue + i + 1), 100 * i)
-  });
+  areaDisplayElement.textContent = numberWithSpaces(parseInt(result[1]))
+  netCountDisplayElement.textContent = numberWithSpaces(parseInt(result[2]))
 }
 
 function displayResultHeader(result) {
@@ -84,6 +73,9 @@ function getDataFromGsheet() {
       })
       .then(function(body) {
         getDataFromString(body, refreshIntervalId)
+      })
+      .catch(function () {
+        clearInterval(refreshIntervalId);
       });
 }
 
