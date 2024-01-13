@@ -194,6 +194,10 @@ dl.bank-details .btn {
   background-repeat: no-repeat;
 }
 
+.messenger-wrap .sl-img-link {
+  margin-inline: 2rem;
+}
+
 .sl-img-link:hover { text-decoration: none; }
 /*Social media links*/
 
