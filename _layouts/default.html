@@ -57,6 +57,12 @@
     {{ content }}
 
     <footer class="site-footer">
+        {% if page.url == "/" %}
+            <h3 class="text-align-center">Контакти:</h3>
+            {% include messenger_links.html %}
+        {% else %}
+            {% include social_media.html %}
+        {% endif %}
     </footer>
 </main>
 <div id="stickyBottom">
