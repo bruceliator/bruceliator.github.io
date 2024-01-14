@@ -12,6 +12,10 @@ html {
   font-weight: bold;
 }
 
+.container.about p {
+  text-align: center;
+}
+
 .project-name a { color: white; }
 .project-name a:hover, .phone:hover { text-decoration: none; }
 .phone {
@@ -192,10 +196,6 @@ dl.bank-details .btn {
   display: inline-block;
   margin: 5px;
   background-repeat: no-repeat;
-}
-
-.messenger-wrap .sl-img-link {
-  margin-inline: 2rem;
 }
 
 .sl-img-link:hover { text-decoration: none; }
