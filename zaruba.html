@@ -1,0 +1,20 @@
+---
+layout: default
+title: Bолонтерське об'єднання <br> "Lastivka"
+description: " "
+navigation_text: На головну
+navigation_link:
+---
+<div class="container about">
+  <div class="battle__result-wrap">
+    {% for fighter in site.data.zaruba %}
+      <div class="battle__result-fighter battle__result-fighter--primary" id="fighter_{{forloop.index}}">
+        <div class="battle__result-avatar">
+          <img alt="Собаки" width="80" height="80" style="color:transparent" src="{{fighter.image_url}}}">
+        </div>
+        <div class="battle__result-title">{{fighter.name}}</div>
+        <div class="battle__result-money">&nbsp</div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

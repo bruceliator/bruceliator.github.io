@@ -1,0 +1,6 @@
+- name: Собака
+  image_url: https://i.ibb.co/zJ1k4zd/img.jpg
+  jar_url: https://api.monobank.ua/bank/jar/2k4GpnSd6XmrJRcxFuLjSXRmZdeEUoZq
+- name: Кіт
+  image_url: https://i.ibb.co/6yvzZYB/cat.jpg
+  jar_url: https://api.monobank.ua/bank/jar/SoPtCjHfFdS47WA9D8VJJZgh49RZQUT

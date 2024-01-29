@@ -1,3 +1,5 @@
+---
+---
 html {
   scroll-behavior: smooth;
 }
@@ -121,16 +123,16 @@ li {
 
 /*Button with icon*/
 
-dl.bank-details dd {
+.bank-details dd {
   margin: 0 0 1em;
 }
 
-dl.bank-details dt {
+.bank-details dt {
   margin: 0 0 0.2em;
   text-align: center;
 }
 
-dl.bank-details .btn {
+.bank-details .btn {
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
@@ -232,4 +234,79 @@ dl.bank-details .btn {
   color: rgba(0, 0, 0, 0.5);
   font-size: 2rem;
   font-weight: 600;
+}
+
+
+.battle__result-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.battle__result-wrap:before {
+  content: "VS";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 28px;
+  font-weight: 600;
+  color: black;
+}
+
+.battle__result-fighter {
+  flex: 0 0 196px;
+  width: 196px;
+  height: 196px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.battle__result-fighter:after, .battle__result-fighter:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.battle__result-fighter:before {
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(209.75deg,#fff -20.43%,hsla(0,0%,100%,.05) 77.83%),linear-gradient(0deg,#79afb9,#79afb9);
+}
+
+.battle__result-fighter:after {
+  width: 196px;
+  height: 196px;
+  background: linear-gradient(215.88deg,#fff -42.09%,hsla(0,0%,100%,.11) 75.52%);
+}
+
+.battle__boxing-avatar, .battle__result-avatar {
+  width: 80px;
+  height: 80px;
+  flex: 0 0 80px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-bottom: 10px;
+}
+
+.battle__boxing-title, .battle__result-title {
+  flex: 1 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 5px;
 }

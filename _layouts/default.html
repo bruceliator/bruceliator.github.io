@@ -19,13 +19,15 @@
         <script src="/assets/js/simple-lightbox.min.js"></script>
         <link rel="stylesheet" href="/assets/css/simple-lightbox.min.css">
         <script src="/assets/js/index.js"></script>
-    {% else %}
+    {% elsif page.url == '/contacts/' %}
         <link rel="stylesheet" href="/assets/css/splide-sea-green.min.css">
         <link rel="stylesheet" href="/assets/css/photoswipe.css">
         <script src="/assets/js/splide.min.js"></script>
         <script src="/assets/js/photoswipe-lightbox.umd.min.js"></script>
         <script src="/assets/js/photoswipe.umd.min.js"></script>
         <script src="/assets/js/about.js"></script>
+    {% elsif page.url == '/zaruba/' %}
+        <script src="/assets/js/zaruba.js"></script>
     {% endif %}
     <link rel="stylesheet" href="/assets/css/app.css">
 
@@ -38,9 +40,9 @@
     <a href="/" class="logo">
       <img src="/assets/images/lastivka.jpg" alt="lastivka-logo">
     </a>
-    <h1 class="project-name"><a href="/">{{ page.title | default: site.title | default: site.github.repository_name }}</a></h1>
-    <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-    {% if page.url != "/" %}
+    <h1 class="project-name"><a href="/">{{ page.title }}</a></h1>
+    <h2 class="project-tagline">{{ page.description }}</h2>
+    {% if page.url == "/contacts/" %}
     <div class="numbers-block">
         <div>
             <span id="area-count">17500</span> м²
@@ -51,6 +53,7 @@
     </div>
     {% endif %}
     <a href="/{{page.navigation_link}}" class="btn"><b>{{ page.navigation_text }}</b></a>
+    <a href="/zaruba" class="btn"><b>Заруба</b></a>
 </header>
 
 <main id="content" class="main-content" role="main">
