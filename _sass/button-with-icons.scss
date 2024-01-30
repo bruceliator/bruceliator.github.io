@@ -1,0 +1,42 @@
+.btn {
+  &.mono {
+    background-color: #159957;
+    background-image: linear-gradient(120deg, #155799, #159957);
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.2s;
+    &:hover {
+      text-decoration: none;
+      transform: scale(1.03);
+    }
+
+    &:not(.copy) { padding-left: 0.9rem; }
+
+    &.icon {
+      position: relative;
+      padding-left: 2.5rem;
+
+      svg {
+        position: absolute;
+        top: 50%;
+        height: 1.5rem;
+        transform: translateY(-50%);
+        &.icon-svg {
+          left: 0.5rem;
+        }
+        &.icon-copy {
+          right: 0.5rem;
+        }
+      }
+    }
+  }
+  &.icon.copy {
+    text-align: left;
+
+    .copy-text {
+      position: absolute;
+      right: 2.5rem;
+    }
+  }
+}
