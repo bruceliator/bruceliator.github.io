@@ -1,0 +1,33 @@
+#stickyBottom {
+  position: sticky;
+  bottom: 35px;
+  margin-top: -70px;
+  height: 70px;
+  pointer-events: none;
+  text-align: right;
+  float: right;
+  padding: 0 10px;
+  z-index: 100;
+}
+#goToTop {
+  display: none;
+  margin: 0 15px;
+  width: 53px;
+  height: 53px;
+  border-radius: 50%;
+  background-color: rgb(253, 195, 41);
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  box-shadow: rgba(253, 195, 41, 0.61) 0 4px 16px 0;
+  cursor: pointer;
+  z-index: 1100;
+  pointer-events: auto;
+}
+.modal-open #goToTop {
+  display: none !important;
+}
+
+#goToTop > svg > path {
+  stroke: black;
+}

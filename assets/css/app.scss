@@ -1,0 +1,98 @@
+---
+---
+@import "variables";
+@import "burger-menu";
+@import "button-with-icons";
+@import "main-gallery";
+@import "scroll-to-top-button";
+@import "lightbox";
+@import "splide";
+
+html {
+  scroll-behavior: smooth;
+}
+.color-details {
+  color: #606c71;
+  font-size: 0.65em;
+  font-weight: bold;
+  display: block;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.container.about p {
+  text-align: center;
+}
+
+.project-name a { color: white; }
+.project-name a:hover, .phone:hover { text-decoration: none; }
+.phone {
+  font-weight: bold;
+  white-space: nowrap;
+}
+.logo img {
+  width: 200px;
+  border-radius: 100%;
+  aspect-ratio: 1/1 auto;
+}
+
+.text-align-center { text-align: center !important; }
+.text-bold { font-weight: bold !important; }
+
+ul {
+  margin:0;
+  padding: 0;
+  text-indent: 0;
+  list-style-type: none;
+}
+li {
+  margin:0;
+  padding: 0;
+  text-indent: 0;
+  list-style-type: none;
+}
+
+.btn {
+  color: gold;
+}
+
+dl.bank-details dd {
+  margin: 0 0 1em;
+}
+
+dl.bank-details dt {
+  margin: 0 0 0.2em;
+  text-align: center;
+}
+
+dl.bank-details .btn {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: block;
+}
+
+/*Social media links*/
+.sl-img-link {
+  height: 44px;
+  width: 44px;
+  display: inline-block;
+  margin: 5px;
+  background-repeat: no-repeat;
+}
+
+.sl-img-link:hover { text-decoration: none; }
+/*Social media links*/
+
+.numbers-block {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr;
+  margin-block: 2rem;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
