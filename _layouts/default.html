@@ -35,6 +35,33 @@
 <a id="skip-to-content" href="#content">Skip to the content.</a>
 
 <header class="page-header" role="banner">
+    <div class="toggle-wrapper">
+        <div class="header-wrap">
+            <div>
+                <button class="toggle-btn" id="burger-menu" role="button" aria-label="Menu">
+                    <span></span>
+                </button>
+            </div>
+            <div class="logo-item">
+                <img src="/assets/images/lastivka.jpg" class="small-logo" alt="lastivka-logo">
+            </div>
+        </div>
+        <div class="toggle__content">
+            <div>
+                <ul role="menu" class="header__list">
+                    <li role="menuitem">
+                        <a href="/" class="reset-link" aria-label="Main page" role="link">Головна</a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="/contacts" class="reset-link" aria-label="About us" role="link">Про нас</a>
+                    </li>
+                    <li role="menuitem">
+                        {% include messenger_links.html %}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <a href="/" class="logo">
       <img src="/assets/images/lastivka.jpg" alt="lastivka-logo">
     </a>
@@ -72,5 +99,6 @@
         </svg>
     </div>
 </div>
+<div class="overlay"></div>
 </body>
 </html>
