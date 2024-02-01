@@ -5,6 +5,7 @@ navigation_text: Про нас
 navigation_link: contacts
 ---
 <div class="container">
+  <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
   {% for color in site.data.palette %}
   {% assign index = forloop.index %}
     <h2>{{color.name}}</h2>

@@ -10,12 +10,11 @@
       text-decoration: none;
       transform: scale(1.03);
     }
-
-    &:not(.copy) { padding-left: 0.9rem; }
-
     &.icon {
       position: relative;
       padding-left: 2.5rem;
+
+      &:not(.copy) { padding-left: 0.9rem; }
 
       svg {
         position: absolute;

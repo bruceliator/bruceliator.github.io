@@ -61,6 +61,9 @@
                     <li role="menuitem">
                         {% include messenger_links.html %}
                     </li>
+                    <li role="menuitem">
+                        {% include social_media.html %}
+                    </li>
                 </ul>
             </div>
         </div>
@@ -69,16 +72,15 @@
       <img src="/assets/images/lastivka.jpg" alt="lastivka-logo">
     </a>
     <h1 class="project-name"><a href="/">{{ page.title | default: site.title | default: site.github.repository_name }}</a></h1>
-    <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
     {% if page.url != "/" %}
-    <div class="numbers-block">
-        <div>
-            <span id="area-count">17500</span> м²
+        <div class="numbers-block">
+            <div>
+                <span id="area-count">17500</span> м²
+            </div>
+            <div>
+                <span id="net-count">400</span> шт
+            </div>
         </div>
-        <div>
-            <span id="net-count">400</span> шт
-        </div>
-    </div>
     {% endif %}
     <a href="/{{page.navigation_link}}" class="btn"><b>{{ page.navigation_text }}</b></a>
 </header>
@@ -91,6 +93,7 @@
             <h3 class="text-align-center">Контакти:</h3>
             {% include messenger_links.html %}
         {% else %}
+            <h3 class="text-align-center text-bold">Ми в соцмережах</h3>
             {% include social_media.html %}
         {% endif %}
     </footer>
