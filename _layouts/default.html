@@ -15,20 +15,19 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
     <link rel="manifest" href="../favicon/site.webmanifest">
-    {% if page.url == "/" %}
-        <script src="/assets/js/simple-lightbox.min.js"></script>
-        <link rel="stylesheet" href="/assets/css/simple-lightbox.min.css">
-        <script src="/assets/js/index.js"></script>
-    {% else %}
-        <link rel="stylesheet" href="/assets/css/splide-sea-green.min.css">
-        <link rel="stylesheet" href="/assets/css/photoswipe.css">
-        <script src="/assets/js/splide.min.js"></script>
-        <script src="/assets/js/photoswipe-lightbox.umd.min.js"></script>
-        <script src="/assets/js/photoswipe.umd.min.js"></script>
-        <script src="/assets/js/about.js"></script>
-    {% endif %}
+    {%- if page.url == "/" -%}
+    <script src="/assets/js/simple-lightbox.min.js"></script>
+    <link rel="stylesheet" href="/assets/css/simple-lightbox.min.css">
+    <script src="/assets/js/index.js"></script>
+    {%- else -%}
+    <link rel="stylesheet" href="/assets/css/splide-sea-green.min.css">
+    <link rel="stylesheet" href="/assets/css/photoswipe.css">
+    <script src="/assets/js/splide.min.js"></script>
+    <script src="/assets/js/photoswipe-lightbox.umd.min.js"></script>
+    <script src="/assets/js/photoswipe.umd.min.js"></script>
+    <script src="/assets/js/about.js"></script>
+    {%- endif -%}
     <link rel="stylesheet" href="/assets/css/app.css">
-
     {% include head-custom.html %}
 </head>
 <body>
@@ -59,10 +58,10 @@
                         <a href="/contacts" class="reset-link" aria-label="About us" role="link">Про нас</a>
                     </li>
                     <li role="menuitem">
-                        {% include messenger_links.html %}
+                    {% include messenger_links.html %}
                     </li>
                     <li role="menuitem">
-                        {% include social_media.html %}
+                    {% include social_media.html %}
                     </li>
                 </ul>
             </div>
@@ -72,7 +71,7 @@
       <img src="/assets/images/lastivka.jpg" alt="lastivka-logo">
     </a>
     <h1 class="project-name"><a href="/">{{ page.title | default: site.title | default: site.github.repository_name }}</a></h1>
-    {% if page.url != "/" %}
+    {%- if page.url != "/" -%}
         <div class="numbers-block">
             <div>
                 <span id="area-count">17500</span> м²
@@ -81,7 +80,7 @@
                 <span id="net-count">400</span> шт
             </div>
         </div>
-    {% endif %}
+    {%- endif -%}
     <a href="/{{page.navigation_link}}" class="btn"><b>{{ page.navigation_text }}</b></a>
 </header>
 
@@ -89,13 +88,13 @@
     {{ content }}
 
     <footer class="site-footer">
-        {% if page.url == "/" %}
+        {%- if page.url == "/" -%}
             <h3 class="text-align-center">Контакти:</h3>
             {% include messenger_links.html %}
-        {% else %}
+        {%- else -%}
             <h3 class="text-align-center text-bold">Ми в соцмережах</h3>
             {% include social_media.html %}
-        {% endif %}
+        {%- endif -%}
     </footer>
 </main>
 <div id="stickyBottom">

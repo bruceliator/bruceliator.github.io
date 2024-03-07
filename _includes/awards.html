@@ -2,16 +2,16 @@
 <section class="splide" aria-label="Splide Basic HTML Example">
   <div class="splide__track">
     <ul class="splide__list">
-      {% for image in site.static_files %}
-        {% capture path %}images/awards/big/{% endcapture %}
-        {% if image.path contains path %}
+      {%- for image in site.static_files -%}
+        {%- capture path -%}images/awards/big/{%- endcapture -%}
+        {%- if image.path contains path -%}
           <li class="splide__slide">
             <a href="{{ site.baseurl }}{{ image.path }}">
               <img loading="lazy" src="{{ site.baseurl }}{{ image.path | replace: 'big', 'small'}}" alt="award_{{ image.basename }}"/>
             </a>
           </li>
-        {% endif %}
-      {% endfor %}
+        {%- endif -%}
+      {%- endfor -%}
     </ul>
   </div>
 </section>
