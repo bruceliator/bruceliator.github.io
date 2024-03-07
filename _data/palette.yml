@@ -1,25 +1,25 @@
-- id: white_multicam
-  name: Білий мультикам
-- id: white_multicam_grafit
-  name: Білий мультикам/графіт<span class="color-details">(графіт можна додавати в будь-яких пропорціях)</span>
 - id: malahit_koyot
   name: Малахіт/Койот
-- id: chocolate_koyot
-  name: Шоколад/Койот
 - id: malahit
   name: Малахіт
 - id: zelen
   name: Зелень
 - id: zelen_olivka
   name: Зелень/Оливка
+- id: malahit_zelen
+  name: Малахіт/Зелень
+- id: chocolate_koyot
+  name: Шоколад/Койот
 - id: olivka
   name: Оливка
 - id: olivka_koyot
   name: Оливка/Койот
 - id: koyot
   name: Койот
-- id: malahit_zelen
-  name: Малахіт/Зелень
+- id: white_multicam
+  name: Білий мультикам
+- id: white_multicam_grafit
+  name: Білий мультикам/графіт<span class="color-details">(графіт можна додавати в будь-яких пропорціях)</span>
 #- id: nefrit_koyot
 #  name: Нефрит/Койот
 
