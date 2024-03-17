@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "uk_UA" }}">
 <head>
+    {% include head-custom.html %}
     <meta charset="UTF-8">
-
     {% seo %}
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
@@ -28,9 +28,12 @@
     <script src="/assets/js/about.js"></script>
     {%- endif -%}
     <link rel="stylesheet" href="/assets/css/app.css">
-    {% include head-custom.html %}
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PJK38QXJ"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <a id="skip-to-content" href="#content">Skip to the content.</a>
 
 <header class="page-header" role="banner">
