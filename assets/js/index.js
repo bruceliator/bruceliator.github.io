@@ -6,6 +6,7 @@ window.addEventListener("load", () => {
         overlayOpacity: '0.92',
         animationSpeed: 200,
         fadeSpeed: 250,
+        captionPosition: 'top',
         preloading: false
       }
   );
