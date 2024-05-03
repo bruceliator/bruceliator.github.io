@@ -7,7 +7,9 @@ window.addEventListener("load", () => {
         animationSpeed: 200,
         fadeSpeed: 250,
         captionPosition: 'top',
-        preloading: false
+        preloading: false,
+        widthRatio: 1,
+        heightRatio: 1
       }
   );
   {% include_relative /pages/index/scroll_to_top.js %}
