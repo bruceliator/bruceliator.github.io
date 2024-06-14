@@ -1,5 +1,11 @@
 ---
 ---
+
+window.addEventListener("DOMContentLoaded", () => {
+  {% include_relative /shared/burger_menu.js %}
+  {% include_relative /pages/index/scroll_to_top.js %}
+});
+
 window.addEventListener("load", () => {
   new SimpleLightbox('.image-gallery a',
       {
@@ -12,6 +18,4 @@ window.addEventListener("load", () => {
         heightRatio: 1
       }
   );
-  {% include_relative /pages/index/scroll_to_top.js %}
-  {% include_relative /shared/burger_menu.js %}
 });
