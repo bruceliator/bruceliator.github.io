@@ -1,11 +1,10 @@
 ---
 ---
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
   {% include_relative /pages/about/copy_text.js %}
   {% include_relative /pages/about/gsheets_info.js %}
   {% include_relative /shared/burger_menu.js %}
-});
-window.addEventListener("load", () => {
+
   let splide = new Splide('.splide', {
     perPage    : 3,
     focus      : 0,
