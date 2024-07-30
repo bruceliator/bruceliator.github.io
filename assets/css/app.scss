@@ -37,6 +37,10 @@ html {
   font-weight: bold;
 }
 
+.no-break {
+  white-space: nowrap;
+}
+
 .container.about p {
   text-align: center;
 }
