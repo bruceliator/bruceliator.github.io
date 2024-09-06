@@ -1,0 +1,43 @@
+---
+layout: default
+title: Bолонтерське об'єднання <br> "Lastivka"
+navigation_text: Про нас
+navigation_link: contacts
+---
+<div class="container">
+    <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+    {%- for color in site.data.palette -%}
+    {%- assign index = forloop.index -%}
+    <h2>{{color.custom_name | default: color.name}}</h2>
+    <section id="main-carousel-{{index}}"  class="splide main-carousel" aria-label="Splide Basic HTML Example fdsa">
+      <div class="splide__track">
+        <ul class="splide__list">
+          {%- for image in site.static_files -%}
+          {%- capture path %}images/nets/big/{{ color.id }}/{% endcapture -%}
+          {%- if image.path contains path -%}
+          <li class="splide__slide">
+            <a href="{{ site.baseurl }}{{ image.path }}">
+              <img src="{{ site.baseurl }}{{ image.path }}" alt="award_{{ image.basename }}" title="{{color.name}}" {%- if index >= 3 -%}loading="lazy" {%- endif -%} />
+            </a>
+          </li>
+          {%- endif -%}
+          {%- endfor -%}
+        </ul>
+      </div>
+    </section>
+    <section id="thumbnail-carousel-{{index}}" class="splide splide-thumb" aria-label="The carousel with thumbnails. Selecting a thumbnail will change the Beautiful Gallery carousel.">
+        <div class="splide__track">
+            <ul class="splide__list">
+                {%- for image in site.static_files -%}
+                  {%- capture path %}images/nets/big/{{ color.id }}/{% endcapture -%}
+                  {%- if image.path contains path -%}
+                  <li class="splide__slide">
+                    <img loading="lazy" src="{{ site.baseurl }}{{ image.path  | replace: 'big', 'small'}}" alt="{{ color.id }}_{{ image.basename }}" title="{{color.name}}"/>
+                  </li>
+                  {%- endif -%}
+                {%- endfor -%}
+            </ul>
+        </div>
+    </section>
+    {%- endfor -%}
+</div>

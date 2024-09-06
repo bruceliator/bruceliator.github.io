@@ -16,10 +16,14 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
     <link rel="manifest" href="../favicon/site.webmanifest">
     {%- if page.url == "/" -%}
+    <link rel="stylesheet" href="/assets/css/splide-sea-green.min.css">
+    <script src="/assets/js/splide.min.js"></script>
     <script src="/assets/js/simple-lightbox.min.js"></script>
     <link rel="stylesheet" href="/assets/css/simple-lightbox.min.css">
     <script src="/assets/js/index.js"></script>
-    {%- else -%}
+    {%- endif -%}
+
+    {%- if page.url == "/contacts/" -%}
     <link rel="stylesheet" href="/assets/css/splide-sea-green.min.css">
     <link rel="stylesheet" href="/assets/css/photoswipe.css">
     <script src="/assets/js/splide.min.js"></script>
@@ -27,6 +31,7 @@
     <script src="/assets/js/photoswipe.umd.min.js"></script>
     <script src="/assets/js/about.js"></script>
     {%- endif -%}
+
     <link rel="stylesheet" href="/assets/css/app.css">
 </head>
 <body>
@@ -77,10 +82,10 @@
     {%- if page.url != "/" -%}
         <div class="numbers-block">
             <div>
-                <span id="area-count">17500</span> м²
+                <span id="area-count">39000</span> м²
             </div>
             <div>
-                <span id="net-count">400</span> шт
+                <span id="net-count">1100</span> шт
             </div>
         </div>
     {%- endif -%}
