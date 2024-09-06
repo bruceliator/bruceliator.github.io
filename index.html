@@ -8,7 +8,7 @@ navigation_link: contacts
     <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
     {%- for color in site.data.palette -%}
     {%- assign index = forloop.index -%}
-    <h2>{{color.custom_name | default: color.name}}</h2>
+    <h2 style="text-align: center">{{color.custom_name | default: color.name}}</h2>
     <section id="main-carousel-{{index}}"  class="splide main-carousel" aria-label="Splide Basic HTML Example fdsa">
       <div class="splide__track">
         <ul class="splide__list">
