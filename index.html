@@ -5,39 +5,84 @@ navigation_text: Про нас
 navigation_link: contacts
 ---
 <div class="container">
-    <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-    {%- for color in site.data.palette -%}
-    {%- assign index = forloop.index -%}
-    <h2 style="text-align: center">{{color.custom_name | default: color.name}}</h2>
-    <section id="main-carousel-{{index}}"  class="splide main-carousel" aria-label="Splide Basic HTML Example fdsa">
-      <div class="splide__track">
-        <ul class="splide__list">
-          {%- for image in site.static_files -%}
+  <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+  {%- for color in site.data.palette -%}
+  {%- assign index = forloop.index -%}
+  <h2 style="text-align: center">{{color.custom_name | default: color.name}}</h2>
+  <section id="main-carousel-{{index}}"  class="splide main-carousel" aria-label="Splide Basic HTML Example fdsa">
+    <div class="splide__track">
+      <ul class="splide__list">
+        {%- for image in site.static_files -%}
+        {%- capture path %}images/nets/big/{{ color.id }}/{% endcapture -%}
+        {%- if image.path contains path -%}
+        <li class="splide__slide">
+          <a href="{{ site.baseurl }}{{ image.path }}">
+            <img src="{{ site.baseurl }}{{ image.path  | replace: 'big', 'small'}}" id="{{color.id}}-{{image.basename}}" alt="award_{{ image.basename }}" title="{{color.name}}" {%- if index > 1 -%}loading="lazy" {%- endif -%} />
+          </a>
+        </li>
+        {%- endif -%}
+        {%- endfor -%}
+      </ul>
+    </div>
+  </section>
+  <section id="thumbnail-carousel-{{index}}" class="splide splide-thumb" aria-label="The carousel with thumbnails. Selecting a thumbnail will change the Beautiful Gallery carousel.">
+    <div class="splide__track">
+      <ul class="splide__list">
+        {%- for image in site.static_files -%}
           {%- capture path %}images/nets/big/{{ color.id }}/{% endcapture -%}
           {%- if image.path contains path -%}
           <li class="splide__slide">
-            <a href="{{ site.baseurl }}{{ image.path }}">
-              <img src="{{ site.baseurl }}{{ image.path }}" alt="award_{{ image.basename }}" title="{{color.name}}" {%- if index >= 3 -%}loading="lazy" {%- endif -%} />
-            </a>
+            <img loading="lazy" src="{{ site.baseurl }}{{ image.path  | replace: 'big', 'small'}}" id="thumb-{{color.id}}-{{image.basename}}" alt="{{ color.id }}_{{ image.basename }}" title="{{color.name}}"/>
           </li>
           {%- endif -%}
-          {%- endfor -%}
-        </ul>
-      </div>
-    </section>
-    <section id="thumbnail-carousel-{{index}}" class="splide splide-thumb" aria-label="The carousel with thumbnails. Selecting a thumbnail will change the Beautiful Gallery carousel.">
-        <div class="splide__track">
-            <ul class="splide__list">
-                {%- for image in site.static_files -%}
-                  {%- capture path %}images/nets/big/{{ color.id }}/{% endcapture -%}
-                  {%- if image.path contains path -%}
-                  <li class="splide__slide">
-                    <img loading="lazy" src="{{ site.baseurl }}{{ image.path  | replace: 'big', 'small'}}" alt="{{ color.id }}_{{ image.basename }}" title="{{color.name}}"/>
-                  </li>
-                  {%- endif -%}
-                {%- endfor -%}
-            </ul>
-        </div>
-    </section>
-    {%- endfor -%}
+        {%- endfor -%}
+      </ul>
+    </div>
+  </section>
+  <script>
+    var main = new Splide( "#main-carousel-{{index}}", {
+      type      : 'fade',
+      rewind    : true,
+      pagination: false,
+      arrows    : false,
+      fixedHeight: 600,
+      breakpoints : {
+        600: {
+          fixedHeight: 300,
+        },
+      },
+    } );
+
+    var thumbnails = new Splide( "#thumbnail-carousel-{{index}}", {
+      fixedWidth  : 133,
+      fixedHeight : 80,
+      gap         : 5,
+      rewind      : true,
+      pagination  : false,
+      isNavigation: true,
+      arrowPath   : 'M21.708 1.667l-4.745 4.713 10.293 10.293h-27.257v6.653h27.257l-10.293 10.293 4.745 4.713 18.292-18.333z',
+      breakpoints : {
+        600: {
+          fixedWidth : 80,
+          fixedHeight: 60,
+        },
+      },
+    } );
+    main.sync( thumbnails );
+    main.mount();
+    thumbnails.mount();
+
+    new SimpleLightbox("#main-carousel-{{index}} a",
+      {
+        overlayOpacity: '0.92',
+        animationSpeed: 200,
+        fadeSpeed: 250,
+        captionPosition: 'top',
+        preloading: false,
+        widthRatio: 1,
+        heightRatio: 1
+      }
+      );
+  </script>
+  {%- endfor -%}
 </div>
