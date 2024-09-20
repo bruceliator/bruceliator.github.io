@@ -32,7 +32,7 @@ navigation_link: contacts
           {%- capture path %}images/nets/big/{{ color.id }}/{% endcapture -%}
           {%- if image.path contains path -%}
           <li class="splide__slide">
-            <img loading="lazy" src="{{ site.baseurl }}{{ image.path  | replace: 'big', 'small'}}" id="thumb-{{color.id}}-{{image.basename}}" alt="{{ color.id }}_{{ image.basename }}" title="{{color.name}}"/>
+            <img loading="lazy" src="{{ site.baseurl }}{{ image.path  | replace: 'big', 'thumb'}}" id="thumb-{{color.id}}-{{image.basename}}" alt="{{ color.id }}_{{ image.basename }}" title="{{color.name}}"/>
           </li>
           {%- endif -%}
         {%- endfor -%}
