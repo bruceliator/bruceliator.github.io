@@ -1,5 +1,9 @@
 {
   "dependencies": {
     "simplelightbox": "^2.13.0"
+  },
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-sharp-responsive": "^0.4.1"
   }
 }
