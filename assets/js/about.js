@@ -8,7 +8,6 @@ window.addEventListener("load", () => {
   let splide = new Splide('.splide', {
     perPage    : 3,
     focus      : 0,
-    type       : 'loop',
     pagination : true,
     arrows     : true,
     lazyLoad   : 'nearby',
