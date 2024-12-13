@@ -22,9 +22,12 @@
   name: Графіт/Гірчиця
 - id: white_multicam
   name: Білий мультикам
-- id: white_multicam_grafit
-  name: Білий мультикам/графіт
-  custom_name: Білий мультикам/графіт<span class="color-details">(графіт можна додавати в будь-яких пропорціях)</span>
+- id: white_multicam_grafit_branches
+  name: Білий мультикам/графіт гілочками
+- id: white_multicam_grafit_75_25
+  name: Білий мультикам/графіт в пропорції 75/25
+- id: white_multicam_grafit_50_50
+  name: Білий мультикам/графіт в пропорції 50/50
 #- id: nefrit_koyot
 #  name: Нефрит/Койот
 
