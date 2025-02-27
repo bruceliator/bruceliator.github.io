@@ -11,13 +11,13 @@ const webpOptions = {
 const sizes = [
   {
     name: 'big',     // Folder name for big images
-    width: 1280,      // Max width for big images
+    width: 1280,      // Max width for big images. !!! 1200 for awards
     format: 'webp',  // Format for big images
     webpOptions: webpOptions
   },
   {
     name: 'small',   // Folder name for small images
-    width: 800,      // Max width for small images
+    width: 800,      // Max width for small images. !!! 600 for awards
     format: 'webp',  // Format for small images
     webpOptions: webpOptions
   }

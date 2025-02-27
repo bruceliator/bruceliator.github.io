@@ -22,7 +22,6 @@ window.addEventListener("load", () => {
       '990': {
         perPage   : 2,
         height    : '30vw',
-        focus     : 1,
       },
     }
   });
