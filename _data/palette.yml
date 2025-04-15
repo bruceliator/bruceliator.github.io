@@ -16,6 +16,8 @@
   name: Оливка
 - id: olivka_koyot
   name: Оливка/Койот
+- id: olivka_koyot_grass
+  name: Оливка/Койот + трава
 - id: koyot
   name: Койот
 - id: grafit_hirchytsia
