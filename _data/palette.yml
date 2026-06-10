@@ -1,15 +1,15 @@
 - id: melanzh
   name: Меланж
-- id: malahit_koyot
-  name: Малахіт/Койот
-- id: malahit
-  name: Малахіт
+- id: fistashka_koyot
+  name: Фісташка/Койот
+- id: fistashka
+  name: Фісташка
 - id: zelen
   name: Зелень
 - id: zelen_olivka
   name: Зелень/Оливка
-- id: malahit_zelen
-  name: Малахіт/Зелень
+- id: fistashka_zelen
+  name: Фісташка/Зелень
 - id: chocolate_koyot
   name: Шоколад/Койот
 - id: olivka
